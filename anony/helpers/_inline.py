@@ -44,6 +44,9 @@ class Inline:
                     self.ikb(text="▢", callback_data=f"controls stop {chat_id}"),
                 ]
             )
+             keyboard.append(
+                [self.ikb(text=f"{_lang['close']}", callback_data="help close")]
+            )
         return self.ikm(keyboard)
 
     def help_markup(
