@@ -152,7 +152,7 @@ class Inline:
             rows += [
                 [
                     self.ikb(
-                        text=lang["𝕮_𝕺_𝕽_𝕰"],
+                        text=lang["source"],
                         url="https://t.me/+73UOpH8smTplYTE9",
                     )
                 ]
