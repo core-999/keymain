@@ -88,7 +88,8 @@ class TgCall(PyTgCalls):
                     media.duration,
                     media.user,
                 )
-                keyboard = buttons.controls(chat_id)
+                # ပြင်ဆင်ထားသည့်နေရာ: _lang ကို ထည့်ပေးလိုက်ပါပြီ
+                keyboard = buttons.controls(chat_id, _lang)
                 try:
                     if _thumb:
                         await message.edit_media(
