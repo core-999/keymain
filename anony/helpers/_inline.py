@@ -152,8 +152,8 @@ class Inline:
             rows += [
                 [
                     self.ikb(
-                        text=lang["source"],
-                        url="https://github.com/AnonymousX1025/AnonXMusic",
+                        text=lang["𝕮_𝕺_𝕽_𝕰"],
+                        url="https://t.me/+73UOpH8smTplYTE9",
                     )
                 ]
             ]
