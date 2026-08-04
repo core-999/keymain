@@ -14,7 +14,7 @@ class Config:
         self.LOGGER_ID = int(getenv("LOGGER_ID", 0))
         self.OWNER_ID = int(getenv("OWNER_ID", 0))
 
-        self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", 60)) * 60
+        self.DURATION_LIMIT = int(getenv("DURATION_LIMIT", 600)) * 60
         self.QUEUE_LIMIT = int(getenv("QUEUE_LIMIT", 20))
         self.PLAYLIST_LIMIT = int(getenv("PLAYLIST_LIMIT", 20))
 
@@ -22,8 +22,8 @@ class Config:
         self.SESSION2 = getenv("SESSION2", None)
         self.SESSION3 = getenv("SESSION3", None)
 
-        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/fallenx")
-        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/DevilsHeavenMF")
+        self.SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/+OqS-RsnNrMtjOTll")
+        self.SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+JmZajlpyTJxlZTE1")
 
         self.AUTO_LEAVE: bool = getenv("AUTO_LEAVE", "False").lower() == "true"
         self.AUTO_END: bool = getenv("AUTO_END", "False").lower() == "true"
@@ -37,9 +37,9 @@ class Config:
             url for url in getenv("COOKIES_URL", "").split(" ")
             if url and "batbin.me" in url
         ]
-        self.DEFAULT_THUMB = getenv("DEFAULT_THUMB", "https://te.legra.ph/file/3e40a408286d4eda24191.jpg")
-        self.PING_IMG = getenv("PING_IMG", "https://files.catbox.moe/haagg2.png")
-        self.START_IMG = getenv("START_IMG", "https://files.catbox.moe/zvziwk.jpg")
+        self.DEFAULT_THUMB = getenv("DEFAULT_THUMB", "https://i.ibb.co/0VnyqcDm/x.jpg")
+        self.PING_IMG = getenv("PING_IMG", "https://i.ibb.co/wFGtd27V/x.jpg")
+        self.START_IMG = getenv("START_IMG", "https://i.ibb.co/0VnyqcDm/x.jpg")
 
     def check(self):
         missing = [
