@@ -55,7 +55,7 @@ class Telegram:
         video = bool(getattr(media, "mime_type", "").startswith("video/"))
 
         if duration > config.DURATION_LIMIT:
-            await sent.edit_text(sent.lang["play_duration_limit"].format(config.DURATION_LIMIT // 60))
+            await sent.edit_text(sent.lang["play_duration_limit"].format(config.DURATION_LIMIT // 600))
             return await sent.stop_propagation()
 
         if file_size > 4000 * 1024 * 1024:
