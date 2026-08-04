@@ -72,8 +72,8 @@ class Thumbnail:
             draw = ImageDraw.Draw(image)
             
             # --- အပေါ်ပိုင်းတွင် ပုံစံတူ စာသားများ ပေါ်လာစေရန် (ဥပမာ - သီချင်းခေါင်း سر သို့မဟုတ် လှပသော စာသားများ) ---
-            top_text_1 = "တခါ နေရာသီကို ရောက်ခဲ့ဖူးပြန့်ကွာ"
-            top_text_2 = "အရင်နှစ်လိုပါပီလား"
+            top_text_1 = ""
+            top_text_2 = ""
             
             # ညာဘက်သို့ အနည်းငယ်ကပ်၍ အပေါ်ပိုင်းတွင် စာသားများ ရေးဆွဲခြင်း
             draw.text((750, 60), top_text_1, font=self.font_top, fill=self.fill)
@@ -90,14 +90,14 @@ class Thumbnail:
             draw.line([(140, 670), (1160, 670)], fill=self.fill, width=5, joint="curve")
             draw.text((1185, 650), song.duration, font=self.font1, fill=self.fill)
 
-            # --- အောက်ခြေတွင် Base64 မှ decode လုပ်ထားသော စာသားကို ပန်းရောင်အရောင်ဖြင့် အလယ်တည့်တည့်တွင် ပြရန် ---
+            # ---
             encoded_str = "U09VUkNFIC0gQEhBTlRIQVI5OTkgQENPUkVTXzk5OQ=="
             decoded_text = base64.b64decode(encoded_str).decode("utf-8")
 
             bbox = draw.textbbox((0, 0), decoded_text, font=self.font_source)
             text_width = bbox[2] - bbox[0]
             x_pos = (size[0] - text_width) / 2
-            y_pos = 680  # အောက်ခြေအစွန်းနားတွင် ပေါ်စေရန်
+            y_pos = 680  # 
 
             # ပုံမှာပြထားသည့်အတိုင်း တောက်ပြောင်သော ပန်းရောင် (Pink/Magenta) ဖြင့် ရေးဆွဲခြင်း
             draw.text((x_pos, y_pos), decoded_text, font=self.font_source, fill=(255, 105, 180))
